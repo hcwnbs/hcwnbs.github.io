@@ -1,3 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
+  <entry>
+    <title><![CDATA[hello, blog]]></title>
+    <url>%2F2018%2F07%2F14%2Fhello-blog%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>hexo</category>
+        <category>github</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>github</tag>
+        <tag>npm</tag>
+        <tag>基础</tag>
+      </tags>
+  </entry>
 </search>
