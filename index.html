@@ -381,7 +381,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  826 字
+                  714 字
                 </span>
               
 
@@ -419,20 +419,36 @@
 
       
         
-          <h1 id="如何通过Github-Pages-hexo搭建个人博客"><a href="#如何通过Github-Pages-hexo搭建个人博客" class="headerlink" title="如何通过Github Pages + hexo搭建个人博客"></a>如何通过Github Pages + hexo搭建个人博客</h1><hr>
+          <font size="5"><center>如何通过Github Pages + hexo搭建个人博客</center></font>
+
 <h2 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h2><h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p>可以直接去<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">官网</a>下载安装，安装成功截图如下：</p>
 <div align="left"><img src="/2018/07/14/Hello-blog-0/node_npm.png" alt="node_npm"></div>
 
 <h3 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h3><p>可以直接去<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">官网</a>下载安装，安装成功截图如下：</p>
 <div align="left"><img src="/2018/07/14/Hello-blog-0/git_suc.png" alt="git_suc"></div>
 
-<h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>在自己认为合适的地方新建一个文件夹，我是在<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">&lt;div align=left&gt;![cd_blog](Hello-blog-0/cd_blog.png)&lt;/div&gt;</span><br><span class="line">接着输入```npm install hexo -g```安装hexo，安装成功截图如下：</span><br><span class="line">&lt;div align=left&gt;![hexo_ins](Hello-blog-0/hexo_ins.png)&lt;/div&gt;</span><br><span class="line">最后输入```hexo init```初始化文件夹，初始化好后输入```npm install```安装所需要的组件，文件夹如下：</span><br><span class="line">&lt;div align=left&gt;![blog_dir](Hello-blog-0/blog_dir.png)&lt;/div&gt;</span><br><span class="line">现在你就可以体验一下hexo啦，输入```hexo g &amp;&amp; hexo s```启动服务器，默认端口为4000，所以打开浏览器，输入```http://localhost:4000```，hexo界面就出现啦：</span><br><span class="line">&lt;div align=left&gt;![hexo_first](Hello-blog-0/hexo_first.png)&lt;/div&gt;</span><br><span class="line">---</span><br><span class="line">## 配置Github</span><br><span class="line"></span><br><span class="line">### 配置Github Pages</span><br><span class="line"></span><br><span class="line">[Github](https://github.com/)账户注册和新建项目，项目必须要遵守格式：账户名.github.io，不然接下来会有很多麻烦。并且需要勾选Initialize this repository with a README：</span><br><span class="line">&lt;div align=left&gt;![github_cre](Hello-blog-0/github_cre.png)&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">在建好的项目右侧有个settings按钮，点击它，向下拉到GitHub Pages，你会看到那边有个网址，访问它，你将会惊奇的发现该项目已经被部署到网络上，能够通过外网来访问它:</span><br><span class="line">&lt;div align=left&gt;![github_page](Hello-blog-0/github_page.png)&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">### 将Hexo与Github page联系起来</span><br><span class="line"></span><br><span class="line">首先要先配置github的ssh key（如果是第一次使用git），详情请见[官方教程](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)。</span><br><span class="line"></span><br><span class="line">任意目录右键点击gitbash here，输入```ssh -T git@github.com```测试添加ssh是否成功。如果看到Hi后面是你的用户名，就说明成功了，成功截图如下：</span><br><span class="line">&lt;div align=left&gt;![git_ssh](Hello-blog-0/git_ssh.png)&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">然后配置hexo，打开```blog/_config.yml```，在末尾找到```deploy:```，配置如下：</span><br><span class="line">&lt;div align=left&gt;![deploy](Hello-blog-0/deploy.png)&lt;/div&gt;</span><br><span class="line">将其中的```hcwnbs```换成你自己创建的项目名就行了。</span><br><span class="line"></span><br><span class="line">## 上传你的第一篇博客</span><br><span class="line">到此为止，所有的基本配置已经全部完成，接下来就可以写你的第一篇博客并上传啦！</span><br><span class="line"></span><br><span class="line">### 新建一篇博客</span><br><span class="line">在cmd执行命令：```hexo new post “博客名”</span><br></pre></td></tr></table></figure></p>
-<div align="left"><img src="/2018/07/14/Hello-blog-0/new_post.png" alt="new_post"></div>
+<h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>在自己认为合适的地方新建一个文件夹，我是在E:/Notes/建了一个blog文件夹，然后通过命令行进入该文件夹内：</p>
+<div align="left"><img src="/2018/07/14/Hello-blog-0/cd_blog.png" alt="cd_blog"></div><br>接着输入npm install hexo -g安装hexo，安装成功截图如下：<br><div align="left"><img src="/2018/07/14/Hello-blog-0/hexo_ins.png" alt="hexo_ins"></div><br>最后输入hexo init初始化文件夹，初始化好后输入npm install安装所需要的组件，文件夹如下：<br><div align="left"><img src="/2018/07/14/Hello-blog-0/blog_dir.png" alt="blog_dir"></div><br>现在你就可以体验一下hexo啦，输入hexo g &amp;&amp; hexo s启动服务器，默认端口为4000，所以打开浏览器，输入<a href="http://localhost:4000，hexo界面就出现啦：" target="_blank" rel="noopener">http://localhost:4000，hexo界面就出现啦：</a><br><div align="left"><img src="/2018/07/14/Hello-blog-0/hexo_first.png" alt="hexo_first"></div>
+
+<h2 id="配置Github"><a href="#配置Github" class="headerlink" title="配置Github"></a>配置Github</h2><h3 id="配置Github-Pages"><a href="#配置Github-Pages" class="headerlink" title="配置Github Pages"></a>配置Github Pages</h3><p><a href="https://github.com/" target="_blank" rel="noopener">Github</a>账户注册和新建项目，项目必须要遵守格式：账户名.github.io，不然接下来会有很多麻烦。并且需要勾选Initialize this repository with a README：</p>
+<div align="left"><img src="/2018/07/14/Hello-blog-0/github_cre.png" alt="github_cre"></div>
+
+<p>在建好的项目右侧有个settings按钮，点击它，向下拉到GitHub Pages，你会看到那边有个网址，访问它，你将会惊奇的发现该项目已经被部署到网络上，能够通过外网来访问它:</p>
+<div align="left"><img src="/2018/07/14/Hello-blog-0/github_page.png" alt="github_page"></div>
+
+<h3 id="将Hexo与Github-page联系起来"><a href="#将Hexo与Github-page联系起来" class="headerlink" title="将Hexo与Github page联系起来"></a>将Hexo与Github page联系起来</h3><p>首先要先配置github的ssh key（如果是第一次使用git），详情请见<a href="https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/" target="_blank" rel="noopener">官方教程</a>。</p>
+<p>任意目录右键点击gitbash here，输入ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>测试添加ssh是否成功。如果看到Hi后面是你的用户名，就说明成功了，成功截图如下：</p>
+<div align="left"><img src="/2018/07/14/Hello-blog-0/git_ssh.png" alt="git_ssh"></div>
+
+<p>然后配置hexo，打开blog/_config.yml，在末尾找到deploy:，配置如下：</p>
+<div align="left"><img src="/2018/07/14/Hello-blog-0/deploy.png" alt="deploy"></div><br>将其中的hcwnbs换成你自己创建的项目名就行了。<br><br>## 上传你的第一篇博客<br>到此为止，所有的基本配置已经全部完成，接下来就可以写你的第一篇博客并上传啦！<br><br>### 新建一篇博客<br>在cmd执行命令：hexo new post “博客名”<br><div align="left"><img src="/2018/07/14/Hello-blog-0/new_post.png" alt="new_post"></div>
 
 <p> 这时候在文件夹_posts目录下将会看到已经创建的文件：<br> <div align="left"><img src="/2018/07/14/Hello-blog-0/hellohexo.png" alt="hellohexo"></div></p>
 <p> 在生成以及部署文章之前，需要安装一个扩展：<code>npm install hexo-deployer-git --save</code></p>
 <p> 使用编辑器编辑创建的<code>hello-hexo.md</code>文件，使用的是<code>markdown</code>语法这里推荐一个网页版的<code>markdown</code>编辑器，可以边预览边编辑，还有教程：<a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="noopener">Cmd Markdown编辑阅读器</a>：<br> <div align="left"><img src="/2018/07/14/Hello-blog-0/hexomd.png" alt="hexomd"></div><br> 接下来只要输入<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code>就可以生成以及部署博客啦。部署成功后访问你的地址：<code>http://用户名.github.io</code>。那么将看到生成的文章：</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a><div align="left"><img src="/2018/07/14/Hello-blog-0/hexoshow.png" alt="hexoshow"></div></h2><p>好啦，到此为止，一个个人博客就搭好啦，接下来如果想要好好布置你的博客，并实现各种个性化设置，请看<strong>博客布置篇</strong>。</p>
+<div align="left"><img src="/2018/07/14/Hello-blog-0/hexoshow.png" alt="hexoshow"></div>
+
+<p>好啦，到此为止，一个个人博客就搭好啦，接下来如果想要好好布置你的博客，并实现各种个性化设置，请看<strong>博客布置篇</strong>。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/07/14/Hello-blog-0/#more" rel="contents">
@@ -601,7 +617,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">826</span>
+    <span title="Site words total count">714</span>
   
 </div>
 
