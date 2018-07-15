@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Hello, blog!]]></title>
     <url>%2F2018%2F07%2F14%2FHello-blog-0%2F</url>
-    <content type="text"><![CDATA[搭建个人博客完整流程配置环境安装Node.js可以直接去官网下载安装，安装成功截图如下： 安装git可以直接去官网下载安装，安装成功截图如下： 安装hexo在自己认为合适的地方新建一个文件夹，我是在’’’E:/Notes/‘’’建了一个blog文件夹，然后通过命令行进入该文件夹内： 接着输入’’’npm install hexo -g’’’安装hexo，安装成功截图如下：最后输入’’’hexo init’’’初始化文件夹，初始化好后输入’’’npm install’’’安装所需要的组件，文件夹如下：]]></content>
+    <content type="text"><![CDATA[搭建个人博客完整流程配置环境安装Node.js可以直接去官网下载安装，安装成功截图如下： 安装git可以直接去官网下载安装，安装成功截图如下： 安装hexo在自己认为合适的地方新建一个文件夹，我是在E:/Notes/建了一个blog文件夹，然后通过命令行进入该文件夹内： 接着输入npm install hexo -g安装hexo，安装成功截图如下：最后输入hexo init初始化文件夹，初始化好后输入npm install安装所需要的组件，文件夹如下：]]></content>
       <categories>
         <category>前端</category>
       </categories>
