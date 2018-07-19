@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[机器学习笔记01]]></title>
+    <url>%2F2018%2F07%2F19%2FML-01%2F</url>
+    <content type="text"><![CDATA[微积分与概率论基础]]></content>
+      <categories>
+        <category>人工智能</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
+        <tag>数学</tag>
+        <tag>基础</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Git—最先进的分布式版本控制系统]]></title>
     <url>%2F2018%2F07%2F17%2Fuse-git%2F</url>
     <content type="text"><![CDATA[Git的一些常用操作命令 开始使用 Git ——找到三颗痣创建版本库首先到你需要建立版本库的目录，然后在命令行里输入：1$ git init ps：该目录里会多一个.git目录，请不要随便修改里面的文件 添加文件1$ git add &lt;file&gt; 可以多次添加文件，然后一次性提交。 提交文件1$ git commit -m &lt;message&gt; -m 后面输入的是本次提交的说明，可以输入任意内容，当然最好是有意义的，这样你就能从历史记录里方便地找到改动记录。 Git 控制——月关宝盒掌握状态和查看修改1$ git status git status 命令可以让我们时刻掌握仓库当前的状态。 1$ git diff &lt;file&gt; 在你修改文件但还没添加或提交的时候，diff 可以告诉你到底哪里修改了 1$ git diff 版本回退一旦你把文件改乱了，或者误删了文件，可以从最近的一个commit恢复，然后继续工作，而不是把几个月的工作成果全部丢失。 在实际工作中，我们脑子里怎么可能记得一个几千行的文件每次都改了什么内容，不然要版本控制系统干什么。版本控制系统肯定有某个命令可以告诉我们历史记录，在Git中，我们用git log命令查看： 1$ git log 其中打印出来的commit 那一行就是 这次版本的 ID 号， ID 号特别有用。 如果有一个文件叫 use_git.txt 最经有三次版本提交，比如commit1、commit2、commit3，git log 命令显示从最近到最远的提交日志，我们可以看到3次提交，最近的一次是commit3，上一次是commit2，最早的一次是commit1。 好了，现在我们启动月关宝盒，准备把use_git.txt回退到上一个版本，也就是commit2的那个版本，怎么做呢？ 首先，Git必须知道当前版本是哪个版本，在Git中，用HEAD表示当前版本，也就是最新的提交commit3，上一个版本就是HEAD^，上上一个版本就是HEAD^^，当然往上100个版本写100个^比较容易数不过来，所以写成HEAD~100。 现在，我们要把当前版本commit3回退到上一个版本commit2，就可以使用git reset命令： 1$ git reset --hard HEAD^ 好了，现在我们已经会退到版本commit2 了，最新的那个版本commit3已经看不到了！好比你从21世纪坐时光穿梭机来到了19世纪，想再回去已经回不去了，肿么办？ 办法其实还是有的，只要上面的命令行窗口还没有被关掉，你就可以顺着往上找啊找啊，找到那个 commit3 的 commit id 是 xxx… ，于是就可以指定回到未来的某个版本： 1$ git reset --hard xxx 好了，现在我们又退到版本commit3 了版本号没必要写全，前几位就可以了，Git会自动去找。当然也不能只写前一两位，因为 Git可能会找到多个版本号，就无法确定是哪一个了。 现在，你回退到了某个版本，关掉了电脑，第二天早上就后悔了，想恢复到新版本怎么办？找不到新版本的commit id怎么办？ 在Git中，总是有后悔药可以吃的。当你用1$ git reset --hard HEAD^ 回退到commit2版本时，再想恢复到commit3，就必须找到commit3的 commit id。Git提供了一个命令git reflog用来记录你的每一次命令： 1$ git reflog 修改文件场景一：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令： 1$ git checkout -- file 场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令1$ git reset HEAD &lt;file&gt; 就回到了场景1，第二步按场景1操作。 场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考版本回退那一步，不过前提是没有推送到远程库。 删除文件1$ git rm &lt;file&gt; 然后： 1$ git commit -m &lt;message&gt; 就把该文件从版本库里删除了。 如果误删了，可以： 1$ git checkout -- &lt;file&gt; git checkout 其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。 远程仓库——五百年前后的记忆添加远程仓库现在的情景是，你已经在本地创建了一个Git仓库后，又想在GitHub创建一个Git仓库，并且让这两个仓库进行远程同步，这样，GitHub上的仓库既可以作为备份，又可以让其他人通过该仓库来协作，真是一举多得。 你首先在Github上新建一个仓库，如命名learngit，目前，在GitHub上的这个learngit仓库还是空的，GitHub告诉我们，可以从这个仓库克隆出新的仓库，也可以把一个已有的本地仓库与之关联，然后，把本地仓库的内容推送到GitHub仓库。现在，我们根据GitHub的提示，在本地的learngit仓库下运行命令: 1$ git remote add origin git@github.com:&lt;name&gt;/learngit.git 添加后，远程库的名字就是origin，这是Git默认的叫法，也可以改成别的，但是origin这个名字一看就知道是远程库。 下一步，就可以把本地库的所有内容推送到远程库上： 1$ git push -u origin master 把本地库的内容推送到远程，用 git push 命令，实际上是把当前分支master推送到远程。 由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。 从现在起，只要本地作了提交，就可以通过命令： 1$ git push origin master 把本地master分支的最新修改推送至GitHub，现在，你就拥有了真正的分布式版本库。 从远程库克隆1$ git clone git@github.com:&lt;name&gt;/&lt;repo name&gt;.git 也可以通过： 1$ git clone https://github.com/&lt;naem&gt;/&lt;repo name&gt;.git 进行克隆。 分支管理——一根毫毛，千万分身查看分支1$ git branch 创建分支1$ git branch &lt;name&gt; 切换分支1$ git checkout &lt;name&gt; 创建+切换分支1$ git checkout -b &lt;name&gt; 合并某分支到当前分支1$ git merge &lt;name&gt; 删除分支删除合并过的分支： 1$ git branch -d &lt;name&gt; 删除未合并过的分支： 1$ git branch -D &lt;name&gt; 存储当前工作现场1$ git stash 查看存储列表 1$ git stash list 恢复工作现场工作，有两个办法： 一是用git stash apply恢复，但是恢复后，stash内容并不删除，你需要用git stash drop来删除； 1git stash apply &lt;stash id（通过stash list查看）&gt; 另一种方式是用git stash pop，恢复的同时把stash内容也删了： 1$ git stash pop 参考文献：廖雪峰老师的Git教程]]></content>
@@ -9,8 +22,8 @@
         <category>github</category>
       </categories>
       <tags>
-        <tag>github</tag>
         <tag>基础</tag>
+        <tag>github</tag>
         <tag>git</tag>
       </tags>
   </entry>
@@ -22,9 +35,9 @@
         <category>前端</category>
       </categories>
       <tags>
+        <tag>基础</tag>
         <tag>hexo</tag>
         <tag>github</tag>
-        <tag>基础</tag>
       </tags>
   </entry>
   <entry>
@@ -35,9 +48,9 @@
         <category>前端</category>
       </categories>
       <tags>
+        <tag>基础</tag>
         <tag>hexo</tag>
         <tag>github</tag>
-        <tag>基础</tag>
         <tag>npm</tag>
       </tags>
   </entry>
