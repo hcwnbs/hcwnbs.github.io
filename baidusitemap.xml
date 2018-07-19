@@ -5,22 +5,25 @@
     
   <url>
     <loc>http://ahaf.xyz/2018/07/19/ML-01/</loc>
-    <lastmod>2018-07-19T08:19:36.890Z</lastmod>
+    <lastmod>2018-07-19T08:22:46.032Z</lastmod>
     <data>
         <display>
         <title>机器学习笔记01</title>
         <pubTime>2018-07-19T08:17:31.000Z</pubTime>
         
+        <tag>基础</tag>
+         
         <tag>机器学习</tag>
          
         <tag>数学</tag>
-         
-        <tag>基础</tag>
          
          
            
              
               <breadCrumb title="人工智能" url="http://ahaf.xyz/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+          
+             
+              <breadCrumb title="机器学习" url="http://ahaf.xyz/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
           
         </display>
     </data>
@@ -35,9 +38,9 @@
         <title>Git—最先进的分布式版本控制系统</title>
         <pubTime>2018-07-17T12:19:43.000Z</pubTime>
         
-        <tag>基础</tag>
-         
         <tag>github</tag>
+         
+        <tag>基础</tag>
          
         <tag>git</tag>
          
@@ -62,11 +65,11 @@
         <title>Hexo博客主题优化之next</title>
         <pubTime>2018-07-16T12:30:22.000Z</pubTime>
         
-        <tag>基础</tag>
-         
         <tag>hexo</tag>
          
         <tag>github</tag>
+         
+        <tag>基础</tag>
          
          
            
@@ -86,13 +89,13 @@
         <title>Hello, blog!</title>
         <pubTime>2018-07-14T08:03:20.000Z</pubTime>
         
-        <tag>基础</tag>
-         
         <tag>hexo</tag>
          
         <tag>github</tag>
          
         <tag>npm</tag>
+         
+        <tag>基础</tag>
          
          
            

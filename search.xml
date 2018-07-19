@@ -6,11 +6,12 @@
     <content type="text"><![CDATA[微积分与概率论基础]]></content>
       <categories>
         <category>人工智能</category>
+        <category>机器学习</category>
       </categories>
       <tags>
+        <tag>基础</tag>
         <tag>机器学习</tag>
         <tag>数学</tag>
-        <tag>基础</tag>
       </tags>
   </entry>
   <entry>
@@ -22,8 +23,8 @@
         <category>github</category>
       </categories>
       <tags>
-        <tag>基础</tag>
         <tag>github</tag>
+        <tag>基础</tag>
         <tag>git</tag>
       </tags>
   </entry>
@@ -35,9 +36,9 @@
         <category>前端</category>
       </categories>
       <tags>
-        <tag>基础</tag>
         <tag>hexo</tag>
         <tag>github</tag>
+        <tag>基础</tag>
       </tags>
   </entry>
   <entry>
@@ -48,10 +49,10 @@
         <category>前端</category>
       </categories>
       <tags>
-        <tag>基础</tag>
         <tag>hexo</tag>
         <tag>github</tag>
         <tag>npm</tag>
+        <tag>基础</tag>
       </tags>
   </entry>
 </search>
