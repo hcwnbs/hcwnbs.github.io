@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Java基础]]></title>
+    <url>%2F2019%2F12%2F25%2Fjava-basic%2F</url>
+    <content type="text"><![CDATA[Java基础学习笔记 开始使用 Git ——找到三颗痣创建版本库首先到你需要建立版本库的目录，然后在命令行里输入：1$ git init ps：该目录里会多一个.git目录，请不要随便修改里面的文件 添加文件1$ git add &lt;file&gt; 可以多次添加文件，然后一次性提交。 提交文件1$ git commit -m &lt;message&gt; -m 后面输入的是本次提交的说明，可以输入任意内容，当然最好是有意义的，这样你就能从历史记录里方便地找到改动记录。]]></content>
+      <categories>
+        <category>后端</category>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>基础</tag>
+        <tag>后端</tag>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[渗透测试学习笔记01]]></title>
     <url>%2F2019%2F03%2F06%2Fhack-01%2F</url>
     <content type="text"><![CDATA[渗透测试基础和学习准备]]></content>
